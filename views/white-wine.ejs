@@ -1,7 +1,7 @@
 <%- include ("partials/header") -%>
 	<div class="background backgroundWhite"></div>
 	<div class="backgroundOverlay"></div>
-	<div class="content whiteContent" style="height:2000px;">
+	<div class="content whiteContent">
 		<div class="header">
 			<div class="logoWrap">
 				<img src="/logos/Vinfo_white.svg" width="50">
@@ -10,5 +10,53 @@
 				Powered by <a href="#">vinfo.rs</a>
 			</div>
 		</div>
+		<div class="mainTitle">Sava Minić</div>
+		<div class="videoWrap" data-fullscreen="0">
+			<div style="position:relative">
+				<video>
+					<source src="/videos/proizvodnja-belo.mp4" type="video/mp4">
+				</video>
+				<div class="overlay" onclick="playVideo(this.parentElement.parentElement)"></div>
+				<img src="/icons/Play-Button.png" class="playButton" onclick="playVideo(this.parentElement.parentElement)">
+				<div class="playerClose" onclick="playVideo(this.parentElement.parentElement)">X</div>
+			</div>
+		</div>
+		<div class="bottleWrap">
+			<div class="imageWrap">
+				<img src="/images/Sava-Minic-Belo.png">
+			</div>
+			<div class="bottleInfo">
+				<div class="title">Sava Minić</div>
+				<div class="subTitle">Tamjanika - <span class="thin">Belo vino</span></div>
+				<div class="paragraph">
+					Sava Minić Tamjanika 2018 je napravljen tradicionalnim načinom od sorte grožđa Tamjanika. Baš takvog ga pravi, neguje i čuva na svom porodničnom imanju, poznati vinar Sava Minić sa svojim naslednicima. Vino se odlikuje zlatno zutom bojom i harmoničnim ukusom. Da bi pokazalo lepotu ukusa, arome-bukea treba ga konzumirati od 8-10°C.
+				</div>
+				<div class="wineContentsWrap">
+					<div class="subTitle">Sastav:</div>
+					<div class="wineContentWrap">
+						<div class="name">
+							Tamjanika (100%) - 
+						</div>
+						<div class="percentage">
+							<div class="powerBar" data-power="100"></div>
+						</div>
+					</div>
+					<div class="subTitle">
+						Berba:
+					</div>
+					<div>2018</div>
+				</div>
+				<div class="temperatureWrap">
+					<div class="subTitle">Serviranje:</div>
+					<div class="temperatureIconWrap">
+						<img src="/icons/Vinfo_white_Temp.svg" width="100">
+						<div class="temperature">
+							9&#176;C
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<script src="/js/videoControls.js"></script>
 <%- include ("partials/footer") -%>
