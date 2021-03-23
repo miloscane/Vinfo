@@ -1,0 +1,77 @@
+<%- include ("partials/header") -%>
+	<div class="background backgroundRed"></div>
+	<div class="backgroundOverlay"></div>
+	<div class="content redContent">
+		<div class="header">
+			<div class="logoWrap">
+				<img src="/logos/Vinfo_red.svg" width="50">
+			</div>
+			<div class="powered">
+				Powered by <a href="#">vinfo.rs</a>
+			</div>
+		</div>
+		<div class="mainTitle">Sava Minić</div>
+		<div class="videoWrap" data-fullscreen="0">
+			<div style="position:relative">
+				<video>
+					<source src="/videos/proizvodnja.mp4" type="video/mp4">
+				</video>
+				<div class="overlay" onclick="playVideo(this.parentElement.parentElement)"></div>
+				<img src="/icons/Play-Button.png" class="playButton" onclick="playVideo(this.parentElement.parentElement)">
+				<div class="playerClose" onclick="playVideo(this.parentElement.parentElement)">X</div>
+			</div>
+		</div>
+		<div class="bottleWrap">
+			<div class="imageWrap">
+				<img src="/images/Sava-Minic-Crveno.png">
+			</div>
+			<div class="bottleInfo">
+				<div class="title">Sava Minić</div>
+				<div class="subTitle">Prokupac - <span class="thin">Suvo crveno vino</span></div>
+				<div class="paragraph">
+					Sava Minić Prokupac 2015 je napravljen tradicionalnim načinom od sorte grožđa Prokupac. Baš takvog ga pravi, neguje i čuva na svom porodničnom imanju, poznati vinar Sava Minić sa svojim naslednicima. Vino se odlikuje tamno crvenom bojom i harmoničnim ukusom. Da bi pokazalo lepotu ukusa, arome-bukea treba ga konzumirati od 18-20°C.
+				</div>
+				<div class="wineContentsWrap">
+					<div class="subTitle">Sastav:</div>
+					<div class="wineContentWrap">
+						<div class="name">
+							Prokupac (75%) - 
+						</div>
+						<div class="percentage">
+							<div class="powerBar" data-power="75"></div>
+						</div>
+					</div>
+					<div class="wineContentWrap">
+						<div class="name">
+							Merlot (25%) - 
+						</div>
+						<div class="percentage">
+							<div class="powerBar" data-power="25"></div>
+						</div>
+					</div>
+					<div class="subTitle">
+						Berba:
+					</div>
+					<div>2015</div>
+				</div>
+				<div class="temperatureWrap">
+					<div class="subTitle">Serviranje:</div>
+					<div class="temperatureIconWrap">
+						<img src="/icons/Vinfo_red_Temp.svg" width="100">
+						<div class="temperature">
+							19&#176;C
+						</div>
+					</div>
+				</div>
+
+				<!--<div class="button">
+					<a href="#">Link</a>
+				</div>
+				<div class="button">
+					Button
+				</div>-->
+			</div>
+		</div>
+	</div>
+	<script src="/js/videoControls.js"></script>
+<%- include ("partials/footer") -%>

@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+body {
+	background-color:rgb(255,255,255);
+}
+
+table { 
+	border-collapse: separate;
+	border-spacing: 0;
+	width: 100%;
+	table-layout:fixed;
+}
+
+a img {
+	border: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: rgb(50,50,50);
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+b {
+	font-weight:600;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.inline{display:inline-block;vertical-align:middle;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.background{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:5;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.backgroundOverlay{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:10;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.backgroundRed{
+	background-image:url(/images/Red-Wine-Background.jpeg);
+	background-position: bottom left;
+}
+
+.backgroundWhite{
+	background-image:url(/images/White-Wine-Background.jpeg);
+	background-position: bottom left;
+}
+
+.content{
+	position:relative;
+	z-index:15;
+	width:950px;
+	margin:0 auto;
+}
+
+.redContent{
+	color:rgb(255,255,255);
+}
+
+.redContent a{
+	color:rgb(255,255,255);
+}
+
+.whiteContent a{
+	color:rgb(255,255,255);
+}
+
+.whiteContent{
+	color:rgb(255,255,255);
+}
+
+.content .header{
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+.content .header .logoWrap{
+	display:inline-block;
+	width:50%;
+	margin-right:-7px;
+	text-align:left;
+	vertical-align: middle;
+}
+
+.content .header .powered{
+	display: inline-block;
+	width:50%;
+	text-align:right;
+	vertical-align: middle;
+}
+
+.content .header .powered a{
+	font-weight:500;
+	text-decoration: underline;
+}
+
+.redContent .header .powered a{
+	color:rgb(155,0,0);
+}
+
+.whiteContent .header .powered a{
+	color:rgb(209,184,33)
+}
+
+.content .videoWrapFullscreen{
+	position:fixed !important;
+	z-index:500 !important;
+	top:0 !important;
+	left:0 !important;
+	right:0 !important;
+	bottom:0 !important;
+}
+
+.content .videoWrapFullscreen .overlay{
+	display:none;
+}
+
+.content .videoWrapFullscreen .playButton{
+	display:none;
+}
+
+.content .videoWrap .playerClose{
+	display:none;
+	position:absolute;
+	top:10px;
+	right:10px;
+	border-radius:25px;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	font-size:30px;
+	border:2px solid rgb(255,255,255);
+	z-index:600;
+	cursor:pointer;
+	text-align:center;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.content .videoWrapFullscreen .playerClose{
+	display:block !important;
+}
+
+.rotate90{
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+}
+
+/*.content .videoWrapFullscreen video{
+	top:50% !important;
+	left:50% !important;
+	position:absolute !important;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+}*/
+
+.content .videoWrap{
+	width:100%;
+	background-color:rgb(0,0,0);
+	border:3px solid rgb(255,255,255);
+	border-radius:3px;
+	position:relative;
+}
+
+.content .videoWrap video{
+	display:block;
+	max-width:100%;
+	position:relative;
+	z-index:5;
+}
+
+.content .videoWrap .overlay{
+	background-color:rgba(0,0,0,0.5);
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:10;
+	cursor:pointer;
+}
+
+.content .videoWrap .playButton{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:30%;
+	z-index:15;
+	cursor:pointer;
+	background-color: rgba(0,0,0,0.5);
+    border-radius: 500px;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+}
+
+.content .mainTitle{
+	font-weight: 600;
+    font-size: 38px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.content .bottleWrap{
+	padding-top:20px;
+}
+
+.content .bottleWrap .imageWrap{
+	display:inline-block;
+	vertical-align:top;
+	width:35%;
+	margin-right:-7px;
+	text-align:center;
+}
+
+.content .bottleWrap .bottleInfo{
+	display:inline-block;
+	vertical-align:top;
+	width:65%;
+	padding-left:20px;
+}
+
+.content .bottleWrap .bottleInfo .title{
+	font-weight:600;
+	font-size:26px;
+}
+
+.content .bottleWrap .bottleInfo .subTitle{
+	font-weight:500;
+	font-size:22px;
+	margin-top:15px;
+}
+
+.content .bottleWrap .bottleInfo .subTitle .thin{
+	font-weight:200;
+}
+
+.content .powerBar{
+	height:14px;
+	border:2px solid rgb(255,255,255);
+	border-radius:3px;
+	position:relative;
+}
+
+.content .powerBar .fill{
+	height:100%;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+	-webkit-transition:all ease 0.5s;
+	-moz-transition:all ease 0.5s;
+	-ms-transition:all ease 0.5s;
+	-o-transition:all ease 0.5s;
+	transition:all ease 0.5s;
+	background-color:rgb(255,255,255);
+	border-radius:0px 3px 3px 0px;
+	position:absolute;
+}
+
+.content .button{
+	cursor:pointer;
+	padding:5px 10px;
+	font-size:20px;
+	font-weight:300;
+	border:1px solid rgb(255,255,255);
+	-webkit-transition:all ease 0.5s;
+	-moz-transition:all ease 0.5s;
+	-ms-transition:all ease 0.5s;
+	-o-transition:all ease 0.5s;
+	transition:all ease 0.5s;
+	display:inline-block;
+	background-color:rgba(255,255,255,0);
+	border-radius:3px;
+}
+
+.content .button:hover{
+	background-color:rgba(255,255,255,0.3);
+}
+
+.content .button a{
+	display:block;
+}
+
+.wineContentsWrap{
+	display:inline-block;
+	vertical-align: top;
+}
+
+.wineContentWrap .name{
+	display:inline-block;
+	vertical-align:middle;
+	width:170px;
+	margin-right:-7px;
+}
+
+.wineContentWrap .percentage{
+	display:inline-block;
+	vertical-align:middle;
+	width:115px;
+	padding-left:10px;
+}
+
+.temperatureWrap{
+	display:inline-block;
+	vertical-align:top;
+	margin-left:40px;
+}
+
+.temperatureWrap .temperatureIconWrap{
+	position:relative;
+	margin-top:10px;
+	display:inline-block;
+}
+
+.temperatureWrap .temperature{
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	font-size:20px;
+	font-weight:600;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+	.content{
+		width:100%;
+		padding:0 10px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.content .bottleWrap .imageWrap{
+		width:20%;
+	}
+
+	.content .bottleWrap .bottleInfo{
+		width:80%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.temperatureWrap{
+		margin-left:0px;
+		display:block;
+	}
+}
+
+
+
+

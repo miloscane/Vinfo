@@ -1,0 +1,26 @@
+		</div><!--#Container-->
+	</body>
+	<script>
+		//Initialize power bars
+		var powerBars	=	document.getElementsByClassName("powerBar");
+		for(var i=0;i<powerBars.length;i++){
+			var powerBarFill	=	document.createElement("DIV");
+			powerBarFill.setAttribute("class","fill");
+			powerBarFill.style.width="0%";
+			powerBars[i].appendChild(powerBarFill);
+
+			var powerBarStrength	=	Number(powerBars[i].dataset.power);
+			if(!isNaN(powerBarStrength)){
+				if(powerBarStrength<0){
+					powerBarFill.style.width="0%";
+				}else if(powerBarStrength>100){
+					powerBarFill.style.width="100%";
+				}else{
+					powerBarFill.style.width=powerBarStrength+"%";
+				}
+			}else{
+				powerBarFill.style.width="0%";
+			}
+		}
+	</script>
+</html>
