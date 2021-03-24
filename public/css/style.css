@@ -127,6 +127,11 @@ a{
 	background-position: bottom left;
 }
 
+.backgroundRose{
+	background-image:url(/images/Rose-Wine-Background.jpg);
+	background-position: bottom left;
+}
+
 .content{
 	position:relative;
 	z-index:15;
@@ -147,6 +152,14 @@ a{
 }
 
 .whiteContent{
+	color:rgb(255,255,255);
+}
+
+.roseContent{
+	color:rgb(255,255,255);
+}
+
+.roseContent a{
 	color:rgb(255,255,255);
 }
 
@@ -181,6 +194,10 @@ a{
 
 .whiteContent .header .powered a{
 	color:rgb(209,184,33)
+}
+
+.roseContent .header .powered a{
+	color:rgb(234,76,128)
 }
 
 .content .videoWrapFullscreen{

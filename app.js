@@ -26,6 +26,10 @@ server.get('/belo',function(req,res){
 	res.render('white-wine',{});
 });
 
+server.get('/roze',function(req,res){
+	res.render('rose-wine',{});
+});
+
 server.get('*',function(req,res){
 	res.redirect('/crveno');
 })
