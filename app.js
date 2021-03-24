@@ -28,7 +28,7 @@ server.get('/belo',function(req,res){
 
 server.get('/roze',function(req,res){
 	res.render('rose-wine',{});
-});
+}); 
 
 server.get('*',function(req,res){
 	res.redirect('/crveno');
