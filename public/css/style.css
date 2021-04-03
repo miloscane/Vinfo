@@ -313,6 +313,7 @@ a{
 
 .content .bottleWrap{
 	padding-top:20px;
+	padding-bottom:50px;
 }
 
 .content .bottleWrap .imageWrap{
@@ -438,6 +439,11 @@ a{
 	font-weight:600;
 }
 
+#map{
+	height:350px;
+	border:2px solid rgb(255,255,255);
+	border-radius:3px;
+}
 
 
 
